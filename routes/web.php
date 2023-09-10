@@ -33,4 +33,13 @@ Route::get('/', function () {
 
 Route::get('/contatti', function () {
     return view('contact');
-});
+})->name ('contatti');
+
+Route::get('/fumetti', function () {
+
+    $comics = config ('comics');
+
+    dd($comics);
+
+    return view('fumetti');    
+})->name ('fumetti');
